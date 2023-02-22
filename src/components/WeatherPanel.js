@@ -25,7 +25,6 @@ export const WeatherPanel = () => {
         urlWeather = urlWeather + cityURL + loc;
 
         await axios.get(urlWeather).then((response) => {
-            if(!response.ok) throw response.data
             return response.data
         }).then((wheatherData) => {
             console.log(wheatherData)
@@ -42,7 +41,6 @@ export const WeatherPanel = () => {
         urlForecast = urlForecast + cityURL + loc;
 
         await axios.get(urlForecast).then((response) => {
-            if(!response.ok) throw response.data
             return response.data
         }).then((forecastData) => {
             console.log(forecastData)
