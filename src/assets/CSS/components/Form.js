@@ -7,6 +7,8 @@ export const Form = () => {
     const onSubmit = (e) => {
         e.preventDefault();
         console.log({city})
+        if(city === '' || !city) return;
+        
     }
 
   return (
