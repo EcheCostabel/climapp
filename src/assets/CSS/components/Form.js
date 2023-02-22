@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-export const Form = () => {
+export const Form = ({newLocation}) => {
     const [ city, setCity ] = useState('');
 
 
@@ -8,7 +8,9 @@ export const Form = () => {
         e.preventDefault();
         console.log({city})
         if(city === '' || !city) return;
-        
+
+        newLocation(city)
+
     }
 
   return (
