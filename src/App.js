@@ -1,7 +1,7 @@
 import './assets/CSS/App.css';
-import { Form } from './assets/CSS/components/Form';
-import { NavBar } from './assets/CSS/components/NavBar';
-import { WeatherPanel } from './assets/CSS/components/WeatherPanel';
+import { Form } from './components/Form';
+import { NavBar } from './components/NavBar';
+import { WeatherPanel } from './components/WeatherPanel';
 
 
 function App() {
