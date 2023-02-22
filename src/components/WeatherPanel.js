@@ -24,11 +24,10 @@ export const WeatherPanel = () => {
 
         urlWeather = urlWeather + cityURL + loc;
 
-        await axios.get(urlWeather).then((response) => {
-            return response.data
-        }).then((wheatherData) => {
-            console.log(wheatherData)
-            setWeather(wheatherData)
+        await axios.get(urlWeather)
+            .then((wheatherData) => {
+            console.log(wheatherData.data)
+            setWeather(wheatherData.data)
         }).catch(error => {
             console.log(error);
             setLoading(false);
@@ -40,11 +39,10 @@ export const WeatherPanel = () => {
 
         urlForecast = urlForecast + cityURL + loc;
 
-        await axios.get(urlForecast).then((response) => {
-            return response.data
-        }).then((forecastData) => {
-            console.log(forecastData)
-            setForecast(forecastData)
+        await axios.get(urlForecast)
+            .then((forecastData) => {
+            console.log(forecastData.data)
+            setForecast(forecastData.data)
 
             setLoading(false);
             setShow(true);
