@@ -87,7 +87,7 @@ export const Card = ({loadingData, showData, weather, forecast}) => {
                     </div>
                 </div>
             ) : (
-                <h2 className='text-light'>SIN DATOS</h2>
+                <h2 className='text-light'>Ingrese una ciudad</h2>
             )
         }
         
