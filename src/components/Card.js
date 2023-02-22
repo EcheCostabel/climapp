@@ -40,7 +40,11 @@ export const Card = ({loadingData, showData, weather, forecast}) => {
                             </div>
                             <div className='col-md-8'>
                                 <div className='card-body text-start mt-2'>
-
+                                    <h5 className='card-text'>Temperatura máxima: {(weather.main.temp_max - 275.15).toFixed(1)}°C</h5>
+                                    <h5 className='card-text'>Temperatura mínima: {(weather.main.temp_min - 275.15).toFixed(1)}°C</h5>
+                                    <h5 className='card-text'>Sensación térmica: {(weather.main.feels_like - 275.15).toFixed(1)}°C</h5>
+                                    <h5 className='card-text'>Humedad: {(weather.main.humidity)}%</h5>
+                                    <h5 className='card-text'>Velocidad del viento: {(weather.main.wind.speed)}m/s</h5>
                                 </div>
                             </div>
                         </div>
