@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import { Form } from './Form';
+import { Card } from './Card';
 
 export const WeatherPanel = () => {
 
@@ -62,6 +63,13 @@ export const WeatherPanel = () => {
     <>
         <Form 
         newLocation={getLocation}
+        />
+
+        <Card 
+            showData={show}
+            loadingData={loading}
+            weather={weather}
+            forecast={forecast}
         />
     </>
   )
