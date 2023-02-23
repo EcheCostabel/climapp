@@ -8,8 +8,8 @@ export const Form = ({newLocation}) => {
         e.preventDefault();
         console.log({city})
         if(city === '' || !city) return;
-
         newLocation(city)
+        alert('Te amo cariño')
 
     }
 
