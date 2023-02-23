@@ -38,7 +38,7 @@ export const Card = ({loadingData, showData, weather, forecast}) => {
     }
 
   return (
-    <div className='mt-5'>
+    <div className='mt-4'>
         {
             showData === true ? (
                 <div className='container'>
@@ -65,7 +65,7 @@ export const Card = ({loadingData, showData, weather, forecast}) => {
 
                             </div>
                             <div className='col-md-8'>
-                                <div className='card-body text-start mt-2'>
+                                <div className='card-body text-center mt-2'>
                                     <h5 className='card-text'>Temperatura máxima: {(weather.main.temp_max - 275.15).toFixed(1)}°C</h5>
                                     <h5 className='card-text'>Temperatura mínima: {(weather.main.temp_min - 275.15).toFixed(1)}°C</h5>
                                     <h5 className='card-text'>Sensación térmica: {(weather.main.feels_like - 275.15).toFixed(1)}°C</h5>
@@ -93,6 +93,7 @@ export const Card = ({loadingData, showData, weather, forecast}) => {
                                         <p className='temp'>{(forecast.list[3].main.temp - 273.15).toFixed(1)}°C</p>
                                     </div>
                                 </div>
+                                
 
                             </div>
                         </div>
