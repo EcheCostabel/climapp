@@ -49,10 +49,20 @@ export const Card = ({loadingData, showData, weather, forecast}) => {
                                 <p className='card-date'>{date}</p>
                                 <h1 className='card-temp'>{(weather.main.temp - 273.15).toFixed(1)}°C</h1>
                                 <p className='card-desc'><img src={iconUrl} alt='icon'/>{weather.weather[0].description}</p>
+
+                                {
+                                    weather.weather[0].description.includes('lluvia') || weather.weather[0].description.includes('tormenta') ? 
+                                    <img  src='https://images.pexels.com/photos/2448749/pexels-photo-2448749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' 
+                                className='img-fluid rounded-start'
+                                alt='...'
+                                /> 
+                                : 
                                 <img  src='https://images.pexels.com/photos/2129796/pexels-photo-2129796.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' 
                                 className='img-fluid rounded-start'
                                 alt='...'
                                 />
+                                }
+
                             </div>
                             <div className='col-md-8'>
                                 <div className='card-body text-start mt-2'>
@@ -63,7 +73,9 @@ export const Card = ({loadingData, showData, weather, forecast}) => {
                                     <h5 className='card-text'>Velocidad del viento: {(weather.wind.speed)}m/s</h5>
                                 </div>
                                 <hr />
-
+                                <div className='card-body text-center py-1'>
+                                    <h5>Durante las proximas horas..</h5>
+                                </div>
                                 <div className='row mt-4'>
                                     <div className='col'>
                                         <p>{forecastDate3}h</p>

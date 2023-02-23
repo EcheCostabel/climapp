@@ -1,5 +1,5 @@
 body{
-  background-color: #2F3544;
+  background-color: #4b65a5;
 }
 
 .App {
@@ -12,10 +12,13 @@ body{
 
 .card{
   width: 80%;
+
 }
 
 .card-title{
   position: absolute;
+  background-color: #2f35445d;
+
   padding: 20px;
 }
 
@@ -30,6 +33,7 @@ body{
   padding-left: 20px;
   margin-top: 280px;
   font-size: 50px;
+
 }
 
 .card-desc{
@@ -38,3 +42,6 @@ body{
   margin-top: 340px;
 
 }
+
+
+

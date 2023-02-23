@@ -9,8 +9,6 @@ export const Form = ({newLocation}) => {
         console.log({city})
         if(city === '' || !city) return;
         newLocation(city)
-        alert('Te amo cariño')
-
     }
 
   return (
